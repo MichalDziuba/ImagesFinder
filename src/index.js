@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React, { lazy, Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
+import { Loader } from "./components/loader/loader";
+const App =lazy(()=>import("./App"))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Suspense
+        fallback={
+         <Loader/>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<App />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -1,17 +1,30 @@
 {
   "name": "images-finder",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://MichalDziuba.github.io/ImagesFinder",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@react-icons/all-files": "^4.1.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.1.3",
+    "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1",
+    "react-use-window-scroll": "^1.0.14",
+    "spinners-react": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +47,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.2"
   }
 }
