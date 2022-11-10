@@ -1,24 +1,20 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { Loader } from "./components/loader/loader";
-const App =lazy(()=>import("./App"))
+const App = lazy(() => import("./App"));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Suspense
-        fallback={
-         <Loader/>
-        }
-      >
+    <HashRouter>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<App />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
