@@ -4,7 +4,7 @@ export const Modal = ({ largeImageURL, tags, modalToggle }) => (
     onClick={modalToggle}
   >
     <div className="max-w-[calc(w-screen-48px)] mr-2 ml-2 max-h-[calc(h-screen-24px)] ">
-      <img src={largeImageURL} alt={tags} />
+      <img src={largeImageURL} alt={tags} loading="lazy" />
     </div>
   </div>
 );

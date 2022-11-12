@@ -20,7 +20,8 @@ export default function GalleryItem(props) {
         className=" md:w-76 h-40 w-72  transition delay-100 ease-in-out hover:shadow-2xl md:h-48 lg:h-52 lg:w-80 2xl:h-72 2xl:w-96 3xl:h-[310px] 3xl:w-[520px] "
         onClick={modalToggle}
       >
-        <img
+        <img 
+          loading="lazy"
           src={webformatURL}
           alt={tags}
           className="h-full w-full object-cover hover:scale-[1.03]"
