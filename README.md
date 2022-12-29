@@ -1,7 +1,7 @@
 # ImageFinder
 🖼️ An image search application
 
-##Link
+## Link
 You can access the application at the following link: https://michaldziuba.github.io/ImagesFinder/
 
 ## Description
